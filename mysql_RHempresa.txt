@@ -1,0 +1,16 @@
+id bigint AI PK 
+nome varchar(30) 
+ativo tinyint(1) 
+salario double 
+cargo varchar(30) 
+area varchar(30)
+
+SELECT `tb_funcionarios`.`id`,
+    `tb_funcionarios`.`nome`,
+    `tb_funcionarios`.`ativo`,
+    `tb_funcionarios`.`salario`,
+    `tb_funcionarios`.`cargo`,
+    `tb_funcionarios`.`area`
+FROM `db_rhempresa`.`tb_funcionarios`;
+select * from tb_funcionarios where salario > 2000;
+select * from tb_funcionarios where salario < 2000;
