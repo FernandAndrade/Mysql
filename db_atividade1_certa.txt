@@ -1,0 +1,28 @@
+CREATE DATABASE rh_empresa;
+
+CREATE TABLE funcionaries (
+id INT NOT NULL AUTO_INCREMENT,
+nome VARCHAR (45),
+setor VARCHAR (20),
+salario DECIMAL (5,2) NOT NULL,
+funcao VARCHAR (30),
+PRIMARY KEY (id)
+) DEFAULT CHARSET = utf8;
+
+INSERT INTO funcionaries (nome, setor, salario, funcao)
+VALUES ('Fernanda', 'T.I', '999.99', 'Estagiária'),
+('Kevelly', 'T.I', '999.99', 'Estagiária'),
+('Rebeca', 'Informática', '750.90', 'Jovem Aprendiz'),
+('Maria Flor', 'RH', '700.50', 'Jovem Aprendiz'),
+('João', 'Serviços Gerais', '999.50', 'Auxiliar de Serviços Gerais');
+
+SELECT nome FROM funcionaries
+WHERE salario < 2000;
+
+SELECT nome FROM funcionaries
+WHERE salario > 2000;
+
+UPDATE funcionaries SET setor = 'T.I', funcao = 'Estagiário' 
+WHERE id = '5';
+
+SELECT * FROM funcionaries;
